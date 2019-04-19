@@ -2,6 +2,10 @@
   "name": "minimal-gulp-sass-pug-starter",
   "version": "1.0.0",
   "description": "A blank-sheet playground starter kit based on Sass and Pug.",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/kobrix/Minimal-Gulp-Sass-Pug-starter.git"
+  }
   "main": "gulpfile.js",
   "scripts": {
     "start": "gulp"
