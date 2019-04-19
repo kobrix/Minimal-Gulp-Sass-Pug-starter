@@ -5,7 +5,7 @@
   "repository": {
     "type": "git",
     "url": "git://github.com/kobrix/Minimal-Gulp-Sass-Pug-starter.git"
-  }
+  },
   "main": "gulpfile.js",
   "scripts": {
     "start": "gulp"
