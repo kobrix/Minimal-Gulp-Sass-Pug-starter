@@ -18,7 +18,7 @@ Running this will:
 1. watch files in `./src/_pug/` and `./src/_sass/` for changes
 1. compile `*.pug` to `*.html` files under `./_site/`
 1. compile `*.sass` to `./_site/main.css`
-1. invoke a server to render the page from `./_site` (in Firefox)
+1. invoke a server to render the page from `./_site` (set to open in Firefox)
 
 ## Features
 
@@ -31,16 +31,23 @@ Running this will:
 - [Pug](https://pugjs.org/)
 - [Browsersync](https://www.browsersync.io)
 
-## Requirements
+## Installation
+
+### Requirements
 
 This assumes [NodeJS](https://nodejs.org/) is already installed in your favourite manner.
 
-## Installation
+Clone or download to somewhere sensible, then:
 
-`npm install` (might be wise to run `npm update --save-dev` first)
-Then either `npm start` or `gulp`
+```
+$ npm install
+```
 
-###
+It might be wise to run `npm update --save-dev` first to freshen-up the versions.
+
+Then run either `npm start` or simply just `gulp`.
+
+### Useful commands
 
 Clobber and rebuild the site folder:
 
