@@ -1,5 +1,5 @@
 {
-  "name": "Minimal Gulp-Sass-Pug starter",
+  "name": "minimal-gulp-sass-pug-starter",
   "version": "1.0.0",
   "description": "A blank-sheet playground starter kit based on Sass and Pug.",
   "main": "gulpfile.js",
