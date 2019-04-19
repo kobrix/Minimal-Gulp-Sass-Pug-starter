@@ -1,0 +1,32 @@
+{
+  "name": "Minimal Gulp-Sass-Pug starter",
+  "version": "1.0.0",
+  "description": "A blank-sheet playground starter kit based on Sass and Pug.",
+  "main": "gulpfile.js",
+  "scripts": {
+    "start": "gulp"
+  },
+  "keywords": [
+    "Gulp",
+    "Sass",
+    "Pug",
+    "CSS",
+    "HTML",
+    "Browsersync"
+  ],
+  "author": "Kobrix",
+  "license": "MIT",
+  "devDependencies": {
+    "autoprefixer": "^9.5.1",
+    "bourbon": "^5.1.0",
+    "browser-sync": "^2.26.3",
+    "cssnano": "^4.1.10",
+    "del": "^4.1.0",
+    "gulp": "^4.0.0",
+    "gulp-postcss": "^8.0.0",
+    "gulp-pug": "^4.0.1",
+    "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^2.6.5",
+    "normalize.css": "^8.0.1"
+  }
+}
