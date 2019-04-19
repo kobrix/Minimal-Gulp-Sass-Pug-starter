@@ -1,32 +1,35 @@
 Minimal Gulp-Sass-Pug starter
 ==============================================================
 
-A blank-sheet playground starter kit based on Sass and Pug. There’s not a lot here, it’s not a framework, has no support for compiling .js or images, and may not work on your setup. The gulpfile may not be the most elegant either, and you might have different views on tabbing, etc.
+A blank-sheet playground starter kit based on [Sass](http://sass-lang.com) and [Pug](https://pugjs.org/) and run with [Gulp](https://gulpjs.com). There’s not a lot here, it’s not a framework, has no support for compiling .js or images, and may not work on your setup. The gulpfile may not be the most elegant either, and you might have different views on tabbing, etc.
 
 I made this purely as a starter for my own stand-alone experiments with css. That said, free to grab and fandoogle it to your own dastardly purposes.
 
 
 ## tl;dr
-0. clone it
+
+Clone this repo, then:
 1. `npm install`
 2. `npm start`
 
 ## Outline
 
-Run this to:
-1. watch files in `./src/_pug` and `./src/_sass` for changes
-2. compile `*.pug` to `*.html` in `./_site`
-2. compile `*.sass` a single `main.css` file in `./_site`
-3. invoke a server to render the page from `./_site` (in Firefox)
+Running this will:
+1. watch files in `./src/_pug/` and `./src/_sass/` for changes
+1. compile `*.pug` to `*.html` files under `./_site/`
+1. compile `*.sass` to `./_site/main.css`
+1. invoke a server to render the page from `./_site` (in Firefox)
 
 ## Features
 
 - [Gulp 4](https://gulpjs.com)
-- [Autoprefixer](https://github.com/postcss/autoprefixer)
-- [Bourbon](https://www.bourbon.io)
 - [Normalize](https://necolas.github.io/normalize.css/)
+- [Bourbon](https://www.bourbon.io)
+- [PostCSS](https://postcss.org)
+	- [Autoprefixer](https://github.com/postcss/autoprefixer)
+	- [cssnano](https://cssnano.co)
 - [Pug](https://pugjs.org/)
-- [Browser Sync](https://www.browsersync.io)
+- [Browsersync](https://www.browsersync.io)
 
 ## Requirements
 
@@ -37,7 +40,28 @@ This assumes [NodeJS](https://nodejs.org/) is already installed in your favourit
 `npm install` (might be wise to run `npm update --save-dev` first)
 Then either `npm start` or `gulp`
 
-To rebuild the site folder run `gulp build`
+###
 
-To watch for changes after a manual rebuild `gulp watch`
+Clobber and rebuild the site folder:
 
+```
+$ gulp build
+```
+
+Watch for changes after a manual rebuild:
+
+```
+$ gulp watch
+```
+
+Clobber the site folder without rebuilding:
+```
+$ gulp clean
+```
+
+## Usage
+Edit the `.pug` and `.sass` files as you see fit, and these will be compiled to the site folder. It's probably cleaner to let `main.sass` import the `.sass` partials, or just shove all your sass into main.sass and ignore the other files. Nomalize will be included anyway.
+
+Edit `gulpfile.js` to change browsersync settings if Firefox isn’t your bag, and change the postCSS options to suit your specific compatibility preferences.
+
+See the various documentation pages (linked above) for full configuration details. Or better still, grab a copy of the excellent [Dash](https://kapeli.com/dash) docset reader.
