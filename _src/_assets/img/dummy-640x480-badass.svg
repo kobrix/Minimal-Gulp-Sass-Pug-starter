@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="480" viewBox="0 0 640 480">
+  <title>dummy-640x480-badass</title>
+  <g>
+    <g>
+      <rect x="3" y="3" width="634" height="474" fill="#bada3b"/>
+      <path d="M634,6V474H6V6H634m6-6H0V480H640V0Z"/>
+    </g>
+    <g>
+      <line x1="20" y1="15" x2="620" y2="465" fill="none" stroke="#000" stroke-linecap="round" stroke-miterlimit="10" stroke-width="6"/>
+      <line x1="620" y1="15" x2="20" y2="465" fill="none" stroke="#000" stroke-linecap="round" stroke-miterlimit="10" stroke-width="6"/>
+    </g>
+  </g>
+</svg>

@@ -3,6 +3,7 @@ const	gulp 			= require('gulp'),
 		bourbon			= require('bourbon').includePaths,
 		cssnano			= require('cssnano'),
 		del 			= require('del'),
+    	imagemin  	    = require('gulp-imagemin'),
 		postcss			= require('gulp-postcss'),
 		pug				= require('gulp-pug'),
 		sass			= require('gulp-sass'),
@@ -63,6 +64,36 @@ function css() {
 }
 
 
+/*----- process images --------------------------------------------*/
+const imgConfig = {
+	src:	dir.src		+ '_assets/img/**/*',
+	watch:	dir.src		+ '_assets/img/**/*',
+	dist:	dir.dest	+ 'assets/img/',
+
+	plugins: [
+        imagemin.gifsicle({interlaced: true}),
+        imagemin.jpegtran({progressive: true}),
+		imagemin.optipng({optimizationLevel: 5}),
+		imagemin.svgo({
+				plugins: [
+					{
+					  removeViewBox: false,
+					  removeDoctype: false,
+					  collapseGroups: false,
+					}
+				]
+			})
+		]
+	};
+
+function images() {
+	return gulp.src(imgConfig.src)
+		.pipe(imagemin(imgConfig.plugins))
+		.pipe(gulp.dest(imgConfig.dist))
+		.pipe(browsersync.stream())
+	;
+}
+
 /*----- browserSync -----------------------------------------------*/
 function browserSync(done) {
 	browsersync.init({
@@ -91,16 +122,18 @@ function watchFiles() {
 		],
 		gulp.series(browserSyncReload)
 	);
+ 	gulp.watch(imgConfig.watch, images);
 }
 
 /*----- gulp routines ---------------------------------------------*/
-const build 	= gulp.series(clean, html, css);
+const build 	= gulp.series(clean, html, gulp.parallel(css, images));
 const watch 	= gulp.parallel(watchFiles, browserSync);
 
 /*----- export tasks ----------------------------------------------*/
 exports.clean 		= clean;
 exports.html		= html;
 exports.css			= css;
+exports.images		= images;
 exports.build 		= build;
 exports.watch 		= watch;
 exports.default 	= gulp.series(build, watch);
