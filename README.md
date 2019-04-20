@@ -1,7 +1,7 @@
 Minimal Gulp-Sass-Pug starter
 ==============================================================
 
-A blank-sheet playground starter kit based on [Sass](http://sass-lang.com) and [Pug](https://pugjs.org/) and run with [Gulp](https://gulpjs.com). There’s not a lot here, it’s not a framework, has no support for compiling .js or images, and may not work on your setup. The gulpfile may not be the most elegant either, and you might have different views on tabbing, etc.
+A blank-sheet playground starter kit based on [Sass](http://sass-lang.com) and [Pug](https://pugjs.org/) and run with [Gulp](https://gulpjs.com). There’s not a lot here, it’s not a framework, has no support for compiling .js ~~or images~~, and may not work on your setup. The gulpfile may not be the most elegant either, and you might have different views on tabbing, etc.
 
 I made this purely as a starter for my own stand-alone experiments with css. That said, free to grab and fandoogle it to your own dastardly purposes.
 
@@ -29,6 +29,7 @@ Running this will:
 	- [Autoprefixer](https://github.com/postcss/autoprefixer)
 	- [cssnano](https://cssnano.co)
 - [Pug](https://pugjs.org/)
+- [Imagemin](https://github.com/imagemin/imagemin)
 - [Browsersync](https://www.browsersync.io)
 
 ## Installation
