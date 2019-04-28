@@ -33,8 +33,8 @@ const htmlConfig = {
 
 function html() {
 	return gulp.src(htmlConfig.src)
-	.pipe(pug())
-	.pipe(gulp.dest(htmlConfig.dest))
+		.pipe(pug())
+		.pipe(gulp.dest(htmlConfig.dest))
 	;
 }
 
@@ -64,6 +64,7 @@ function css() {
 }
 
 
+
 /*----- process images --------------------------------------------*/
 const imgConfig = {
 	src:	dir.src		+ '_assets/img/**/*',
@@ -75,16 +76,16 @@ const imgConfig = {
         imagemin.jpegtran({progressive: true}),
 		imagemin.optipng({optimizationLevel: 5}),
 		imagemin.svgo({
-				plugins: [
-					{
-					  removeViewBox: false,
-					  removeDoctype: false,
-					  collapseGroups: false,
-					}
-				]
-			})
-		]
-	};
+			plugins: [
+				{
+					removeViewBox: false,
+					removeDoctype: false,
+					collapseGroups: false,
+				}
+			]
+		})
+	]
+};
 
 function images() {
 	return gulp.src(imgConfig.src)
