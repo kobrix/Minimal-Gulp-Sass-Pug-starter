@@ -21,7 +21,7 @@
   "author": "Kobrix",
   "license": "MIT",
   "devDependencies": {
-    "autoprefixer": "^9.5.1",
+    "autoprefixer": "^9.6.0",
     "bourbon": "^5.1.0",
     "browser-sync": "^2.26.7",
     "cssnano": "^4.1.10",
