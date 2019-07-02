@@ -33,5 +33,10 @@
     "gulp-sass": "^4.0.2",
     "gulp-sourcemaps": "^2.6.5",
     "normalize.css": "^8.0.1"
-  }
+  },
+  "browserslist": [
+    "last 15 versions",
+    "> 1%",
+    "IE 10"
+  ]
 }
