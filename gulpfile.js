@@ -1,20 +1,22 @@
-const	gulp 			= require('gulp'),
+const	gulp			= require('gulp'),
 		autoprefixer	= require('autoprefixer'),
 		bourbon			= require('bourbon').includePaths,
 		cssnano			= require('cssnano'),
-		del 			= require('del'),
-    	imagemin  	    = require('gulp-imagemin'),
+		del				= require('del'),
+		imagemin		= require('gulp-imagemin'),
 		postcss			= require('gulp-postcss'),
 		pug				= require('gulp-pug'),
 		sass			= require('gulp-sass'),
 		sourcemaps		= require('gulp-sourcemaps'),
 		browsersync		= require('browser-sync').create();
 
+
 /*----- directories -----------------------------------------------*/
 const dir = {
-	src:	'./_src/',				// where our source files live
-	dest:	'./_site/',				// where we build our files to
+	src:	'./_src/',		// where our source files live
+	dest:	'./_site/',		// where we build our files to
 };
+
 
 /*----- clobber the build directory -------------------------------*/
 function clean() {
@@ -26,9 +28,9 @@ function clean() {
 
 /*----- compile Pug files to html ---------------------------------*/
 const htmlConfig = {
-	src: 	dir.src		+ '_pug/**/*.pug',
-	watch: 	dir.src		+ '_pug/**/*.pug',
-	dest: 	dir.dest,
+	src:	dir.src		+ '_pug/**/*.pug',
+	watch:	dir.src		+ '_pug/**/*.pug',
+	dest:	dir.dest,
 };
 
 function html() {
@@ -60,9 +62,8 @@ function css() {
 		.pipe(sourcemaps.write('.'))
 		.pipe(gulp.dest(cssConfig.dist))
 		.pipe(browsersync.stream())
-    ;
+	;
 }
-
 
 
 /*----- process images --------------------------------------------*/
@@ -72,8 +73,8 @@ const imgConfig = {
 	dist:	dir.dest	+ 'assets/img/',
 
 	plugins: [
-        imagemin.gifsicle({interlaced: true}),
-        imagemin.jpegtran({progressive: true}),
+		imagemin.gifsicle({interlaced: true}),
+		imagemin.jpegtran({progressive: true}),
 		imagemin.optipng({optimizationLevel: 5}),
 		imagemin.svgo({
 			plugins: [
@@ -95,14 +96,15 @@ function images() {
 	;
 }
 
+
 /*----- browserSync -----------------------------------------------*/
 function browserSync(done) {
 	browsersync.init({
 		server: {
 			baseDir: dir.dest,
 		},
-		browser: 	'firefox',
-		notify: 	false,
+		browser:	'firefox',
+		notify:	false,
 	});
 	done();
 }
@@ -113,31 +115,34 @@ function browserSyncReload(done) {
 	done();
 }
 
+
 /*----- watch tasks -----------------------------------------------*/
 function watchFiles() {
 	gulp.watch(cssConfig.watch, css);
- 	gulp.watch(htmlConfig.watch, html);
+	gulp.watch(htmlConfig.watch, html);
 	gulp.watch(
 		[
 			dir.dest		+ '*.html',
 		],
 		gulp.series(browserSyncReload)
 	);
- 	gulp.watch(imgConfig.watch, images);
+	gulp.watch(imgConfig.watch, images);
 }
 
+
 /*----- gulp routines ---------------------------------------------*/
-const build 	= gulp.series(clean, html, gulp.parallel(css, images));
-const watch 	= gulp.parallel(watchFiles, browserSync);
+const build		= gulp.series(clean, html, gulp.parallel(css, images));
+const watch		= gulp.parallel(watchFiles, browserSync);
+
 
 /*----- export tasks ----------------------------------------------*/
-exports.clean 		= clean;
-exports.html		= html;
-exports.css			= css;
-exports.images		= images;
-exports.build 		= build;
-exports.watch 		= watch;
-exports.default 	= gulp.series(build, watch);
+exports.clean	= clean;
+exports.html	= html;
+exports.css		= css;
+exports.images	= images;
+exports.build	= build;
+exports.watch	= watch;
+exports.default	= gulp.series(build, watch);
 
 
 /*-----------------------------------------------------------------*/
