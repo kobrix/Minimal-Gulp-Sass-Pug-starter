@@ -21,13 +21,14 @@
   "author": "Kobrix",
   "license": "MIT",
   "devDependencies": {
-    "autoprefixer": "^9.7.0",
+    "autoprefixer": "^9.7.1",
     "bourbon": "^6.0.0",
     "browser-sync": "^2.26.7",
+    "caniuse-lite": "^1.0.30001010",
     "cssnano": "^4.1.10",
     "del": "^5.1.0",
     "gulp": "^4.0.2",
-    "gulp-imagemin": "^6.1.1",
+    "gulp-imagemin": "^6.2.0",
     "gulp-postcss": "^8.0.0",
     "gulp-pug": "^4.0.1",
     "gulp-sass": "^4.0.2",
@@ -38,5 +39,6 @@
     "last 15 versions",
     "> 1%",
     "IE 10"
-  ]
+  ],
+  "dependencies": {}
 }
