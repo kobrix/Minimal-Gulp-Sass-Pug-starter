@@ -103,7 +103,7 @@ function browserSync(done) {
 		server: {
 			baseDir: dir.dest,
 		},
-		browser:	'firefox',
+		browser:	'firefox developer edition',
 		notify:	false,
 	});
 	done();
