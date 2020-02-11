@@ -9,12 +9,14 @@ I made this purely as a starter for my own stand-alone experiments with css. Tha
 ## tl;dr
 
 Clone this repo, then:
+
 1. `npm install`
 2. `npm start`
 
 ## Outline
 
 Running this will:
+
 1. watch files in `./src/_pug/` and `./src/_sass/` for changes
 1. compile `*.pug` to `*.html` files under `./_site/`
 1. compile `*.sass` to `./_site/main.css`
