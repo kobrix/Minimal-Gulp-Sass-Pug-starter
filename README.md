@@ -46,7 +46,7 @@ Clone or download to somewhere sensible, then:
 $ npm install
 ```
 
-It might be wise to run `npm update --save-dev` first to freshen-up the versions.
+It might be wise to run `npm update --save-dev` first to freshen-up the versions. Or if [npm-check-updates](https://github.com/raineorshine/npm-check-updates) is installed run `ncu -u` then `npm install`.
 
 Then run either `npm start` or simply just `gulp`.
 
