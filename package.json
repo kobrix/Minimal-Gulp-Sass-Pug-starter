@@ -21,10 +21,10 @@
   "author": "Kobrix",
   "license": "MIT",
   "devDependencies": {
-    "autoprefixer": "^9.8.5",
+    "autoprefixer": "^9.8.6",
     "bourbon": "^7.0.0",
     "browser-sync": "^2.26.12",
-    "caniuse-lite": "^1.0.30001107",
+    "caniuse-lite": "^1.0.30001123",
     "cssnano": "^4.1.10",
     "del": "^5.1.0",
     "gulp": "^4.0.2",
