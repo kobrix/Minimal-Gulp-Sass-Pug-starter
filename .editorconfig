@@ -1,0 +1,21 @@
+# EditorConfig is awesome: https://EditorConfig.org
+
+root = true
+
+[*]
+end_of_line = lf
+insert_final_newline = true
+
+# set charset
+[*.{js,md,pug,sass,scss}]
+charset = utf-8
+
+# set 4-space indents
+[*.{js,pug,sass,scss}]
+indent_style = tab
+indent_size = 4
+trim_trailing_whitespace = true
+
+[*.md]
+charset = utf-8
+trim_trailing_whitespace = false
