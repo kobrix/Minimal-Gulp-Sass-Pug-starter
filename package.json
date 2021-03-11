@@ -24,7 +24,7 @@
     "autoprefixer": "^10.2.5",
     "bourbon": "^7.0.0",
     "browser-sync": "^2.26.14",
-    "caniuse-lite": "^1.0.30001197",
+    "caniuse-lite": "^1.0.30001198",
     "cssnano": "^4.1.10",
     "del": "^6.0.0",
     "gulp": "^4.0.2",
@@ -34,7 +34,7 @@
     "gulp-sass": "^4.1.0",
     "gulp-sourcemaps": "^3.0.0",
     "normalize.css": "^8.0.1",
-    "postcss": "^8.2.7"
+    "postcss": "^8.2.8"
   },
   "browserslist": [
     "last 15 versions",
