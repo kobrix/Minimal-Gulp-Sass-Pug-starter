@@ -6,7 +6,7 @@ const	gulp			= require('gulp'),
 		imagemin		= require('gulp-imagemin'),
 		postcss			= require('gulp-postcss'),
 		pug				= require('gulp-pug'),
-		sass			= require('gulp-sass'),
+		sass			= require('gulp-sass')(require('sass')),
 		sourcemaps		= require('gulp-sourcemaps'),
 		browsersync		= require('browser-sync').create();
 
